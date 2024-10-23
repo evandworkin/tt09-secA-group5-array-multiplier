@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This project takes in two 4-bit inputs and multiplies them together into a an 8-bit output. It uses an array of 12 full adders to do so (see image)
 
 ## How to test
 
-Explain how to use your project
+Input two 4-bit numbers via ui_in. The 4 most significant bits are taken to be the first term, the 4 least significant bits are taken to be the second term. The 8 uo_out bits are the output, in binary.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+None
