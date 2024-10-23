@@ -24,18 +24,18 @@ module tt_um_secA_group5_array_multiplier (
   
   wire [16:0] int;
   assign p[0] = m[0] & q[0];
-  full_adder fa00(m[1] & q[0], m[0] & q[1], 1'b0, p[1], int[0]);
-  full_adder fa01(m[2] & q[0], m[1] & q[1], int[0], int[1], int[2]);
-  full_adder fa02(m[3] & q[0], m[2] & q[1], int[2], int[3], int[4]);
-  full_adder fa03(1'b0, m[3] & q[1], int[4], int[5], int[6]);
-  full_adder fa10(m[0] & q[2], int[1], 1'b0, p[2], int[7]);
-  full_adder fa11(m[1] & q[2], int[3], int[7], int[8], int[9]);
-  full_adder fa12(m[2] & q[2], int[5], int[9], int[10], int[11]);
-  full_adder fa13(m[3] & q[2], int[6], int[11], int[12], int[13]);
-  full_adder fa20(m[0] & q[3], int[8], 1'b0, p[3], int[14]);
-  full_adder fa21(m[1] & q[3], int[14], int[10], p[4], int[15]);
-  full_adder fa22(m[2] & q[3], int[15], int[12], p[5], int[16]);
-  full_adder fa23(m[3] & q[3], int[16], int[13], p[6], p[7]);
+  full_adder fa00(.a(m[1] & q[0]), .b(m[0] & q[1]), .carry_in(1'b0), .sum(p[1]), .carry_out(int[0]));
+  full_adder fa01(a.(m[2] & q[0]), .b(m[1] & q[1]), .carry_in(int[0]), .sum(int[1]), .carry_out(int[2]));
+  full_adder fa02(.a(m[3] & q[0]), .b(m[2] & q[1]), .carry_in(int[2]), .sum(int[3]), .carry_out(int[4]));
+  full_adder fa03(.a(1'b0), .b(m[3] & q[1]), .carry_in(int[4]), .sum(int[5]), .carry_out(int[6]));
+  full_adder fa10(.a(m[0] & q[2]), .b(int[1]), .carry_in(1'b0), .sum(p[2]), .carry_out(int[7]));
+  full_adder fa11(.a(m[1] & q[2]), .b(int[3]), .carry_in(int[7]), .sum(int[8]), .carry_out(int[9]));
+  full_adder fa12(.a(m[2] & q[2]), .b(int[5]), .carry_in(int[9]), .sum(int[10]), .carry_out(int[11]));
+  full_adder fa13(.a(m[3] & q[2]), .b(int[6]), .carry_in(int[11]), .sum(int[12]), .carry_out(int[13]));
+  full_adder fa20(.a(m[0] & q[3]), .b(int[8]), .carry_in(1'b0), .sum(p[3]), .carry_out(int[14]));
+  full_adder fa21(.a(m[1] & q[3]), .b(int[14]), .carry_in(int[10]), .sum(p[4]), .carry_out(int[15]));
+  full_adder fa22(.a(m[2] & q[3]), .b(int[15]), .carry_in(int[12]), .sum(p[5]), .carry_out(int[16]));
+  full_adder fa23(.a(m[3] & q[3]), .b(int[16]), .carry_in(int[13]), .sum(p[6]), .carry_out(p[7]));
 
   assign uo_out = p;
   assign uio_out = 0;

@@ -3,7 +3,7 @@ project:
   title:        "ECE-2204 4x4 Array Multiplier"      # Project title
   author:       "Evan Dworkin, Dante Minasyan"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Multipliers two 4-bit numbers together"      # One line description of what your project does
+  description:  "Multiplies two 4-bit numbers together"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
