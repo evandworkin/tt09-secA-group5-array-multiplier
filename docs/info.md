@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-This project takes in two 4-bit inputs and multiplies them together into an 8-bit output. It uses an array of 12 full adders and 16 AND gates to do so (figure below). The operands are represented by the input pins with [0:3] representing operand 1 and [7:4] representing operand 2. The product is represented by the 8-bit output pin.
+This project takes in two 4-bit inputs and multiplies them together into an 8-bit output. It uses an array of 12 full adders and 16 AND gates to do so (Figure 1). The operands are represented by the input pins with [0:3] representing operand 1 and [7:4] representing operand 2. The product is represented by the 8-bit output pin.
 
 ![4x4 Array Multiplier](4x4-array-multiplier.png)
 
